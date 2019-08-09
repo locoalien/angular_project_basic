@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="fvl_front">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./config.json"></script>
+    <script src="./node_modules/angular/angular.min.js"></script>
+    <script src="index.js"></script>
+</head>
+
+<body ng-controller="fvl_get" ng-init="iniciar()">
+    Numero1:<input type="text" ng-model="n1">
+    Numero2:<input type="text" ng-model="n2">
+    <button ng-click="suma()">Enviar</button>
+    <button ng-click="obtener_datos()">Obtener datos</button>
+    <label for="" >{{resultado}}</label>
+    <input type="text" placeholder="Buscar dato" ng-model="buscarDato">
+    <table>
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>name</th>
+                <th>active</th>
+                <th>created_at</th>
+            </tr>
+        </thead>
+        <tr ng-repeat="datos in fvl_datos | filter:buscarDato">
+            <td>{{datos.id}}</td>
+            <td>{{datos.name}}</td>
+            <td>{{datos.active}}</td>
+            <td>{{datos.created_at}}</td>
+        </tr>
+    </table>
+</body>
+
+</html>

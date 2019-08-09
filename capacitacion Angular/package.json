@@ -1,0 +1,17 @@
+{
+  "name": "fvl",
+  "version": "1.0.0",
+  "description": "Proyecto FVL Front-End",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "fvl"
+  ],
+  "author": "santiago gonzalez santiagosk80@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.7.8"
+  }
+}
